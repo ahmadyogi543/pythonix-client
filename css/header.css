@@ -1,0 +1,43 @@
+.header {
+  background-color: #fff;
+  color: #1b1b1b;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+}
+
+.header-section {
+  display: flex;
+  align-items: center;
+}
+
+.header-title {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-title p:first-child {
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.header-title p:last-child {
+  font-size: 16px;
+  line-height: 1;
+}
+
+.header-logo-img {
+  margin-right: 8px;
+}
+
+.s-header-title {
+  display: flex;
+  align-items: center;
+}
+
+.s-header-title p {
+  margin-left: 8px;
+}

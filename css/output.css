@@ -1,0 +1,10 @@
+#code-output {
+  flex: 1;
+  line-height: 1;
+  padding: 8px;
+  overflow: auto;
+}
+
+#code-output ul > li {
+  list-style-type: none;
+}

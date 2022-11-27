@@ -2,6 +2,7 @@ const codeEditor = ace.edit("code-editor");
 const codeInput = document.getElementById("code-input");
 const codeOutput = document.getElementById("code-output");
 const btnRun = document.getElementById("btn-run");
+const btnSave = document.getElementById("btn-save");
 const btnClear = document.getElementById("btn-clear");
 
 let isAlreadyRun = false;
@@ -65,6 +66,18 @@ async function executeCode(url = "", data = {}) {
   return response.json();
 }
 
+function saveFileAs() {
+  if ((promptFilename = prompt("Save file as", ""))) {
+    const textBlob = new Blob([codeEditor.getValue()], { type: "text/plain" });
+    const downloadLink = document.createElement("a");
+    downloadLink.download = promptFilename;
+    downloadLink.href = window.URL.createObjectURL(textBlob);
+    downloadLink.click();
+    delete downloadLink;
+    delete textBlob;
+  }
+}
+
 /* add listeners */
 btnRun.addEventListener("click", () => {
   if (!isAlreadyRun) {
@@ -104,3 +117,5 @@ btnRun.addEventListener("click", () => {
 btnClear.addEventListener("click", () => {
   clearOutput();
 });
+
+btnSave.addEventListener("click", saveFileAs);

@@ -91,7 +91,7 @@ btnRun.addEventListener("click", () => {
       code: codeEditor.getValue(),
       input: codeInput.value,
     };
-    executeCode("https://pythonix-compiler.herokuapp.com/execute", data)
+    executeCode("https://pythonix-compiler.up.railway.app/execute", data)
       .then((resp) => {
         codeOutput.classList.toggle("center");
         codeOutput.innerHTML = `

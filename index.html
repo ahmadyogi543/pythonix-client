@@ -76,7 +76,18 @@
               <p>CODE EDITOR</p>
             </div>
             <div style="display: flex; align-items: center; gap: 8px">
-              <button id="btn-open" class="btn btn-secondary" title="Open file">
+              <input
+                type="file"
+                id="selected-file"
+                style="display: none"
+                accept=".py"
+              />
+              <button
+                id="btn-open"
+                class="btn btn-secondary"
+                title="Open file"
+                onclick="document.getElementById('selected-file').click()"
+              >
                 <box-icon name="folder-open" type="solid"></box-icon>
               </button>
               <button id="btn-save" class="btn btn-secondary" title="Save file">

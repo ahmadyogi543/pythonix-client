@@ -4,6 +4,7 @@ const codeOutput = document.getElementById("code-output");
 const btnRun = document.getElementById("btn-run");
 const btnSave = document.getElementById("btn-save");
 const btnClear = document.getElementById("btn-clear");
+const selectedFile = document.getElementById("selected-file");
 
 let isAlreadyRun = false;
 
@@ -19,7 +20,7 @@ codeEditor.setOptions({
   showPrintMargin: false,
   tabSize: 2,
 });
-codeEditor.setValue("# Your code goes here...\n\n");
+codeEditor.setValue("# Your code goes here...\n\n", 1);
 
 /* functions */
 function setLoadingToOutput() {
@@ -125,3 +126,20 @@ btnClear.addEventListener("click", () => {
 });
 
 btnSave.addEventListener("click", saveFileAs);
+
+selectedFile.addEventListener("change", (ev) => {
+  const file = ev.target.files[0];
+  const reader = new FileReader();
+
+  reader.addEventListener(
+    "load",
+    () => {
+      codeEditor.setValue(reader.result, -1);
+    },
+    false
+  );
+
+  if (file) {
+    reader.readAsText(file);
+  }
+});

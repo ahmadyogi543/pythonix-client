@@ -1,11 +1,10 @@
 .header {
   background-color: #fff;
   color: #1b1b1b;
-  height: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 24px;
+  padding: 8px 24px;
 }
 
 .header-section {

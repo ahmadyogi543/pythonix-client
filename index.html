@@ -75,9 +75,17 @@
               <box-icon name="code"></box-icon>
               <p>CODE EDITOR</p>
             </div>
-            <div style="display: flex; align-items: center; gap: 12px">
-              <button id="btn-save" class="btn btn-secondary">SAVE</button>
-              <button id="btn-run" class="btn btn-primary">RUN</button>
+            <div style="display: flex; align-items: center; gap: 8px">
+              <button id="btn-open" class="btn btn-secondary" title="Open file">
+                <box-icon name="folder-open" type="solid"></box-icon>
+              </button>
+              <button id="btn-save" class="btn btn-secondary" title="Save file">
+                <box-icon name="save" type="solid"></box-icon>
+              </button>
+              <button id="btn-run" class="btn btn-primary">
+                <box-icon name="play-circle" color="#fff"></box-icon>
+                RUN
+              </button>
             </div>
           </div>
           <div id="code-editor"></div>
@@ -100,7 +108,9 @@
               <box-icon name="terminal"></box-icon>
               <p>OUTPUT</p>
             </div>
-            <button id="btn-clear" class="btn btn-secondary">CLEAR</button>
+            <button id="btn-clear" class="btn btn-secondary">
+              <box-icon name="trash" type="solid"></box-icon>
+            </button>
           </div>
           <div id="code-output">
             <ul id="code-output-list">

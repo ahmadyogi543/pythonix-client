@@ -42,11 +42,17 @@ function clearOutput() {
 
 function changeBtnState(isLoading = false) {
   if (isLoading) {
-    btnRun.innerHTML = "LOADING...";
+    btnRun.innerHTML = `
+      <box-icon name="loader-circle" color="#fff" class="rotate"></box-icon>
+      LOADING...
+    `;
     btnRun.style.backgroundColor = "#767676";
     btnRun.style.cursor = "progress";
   } else {
-    btnRun.innerHTML = "RUN";
+    btnRun.innerHTML = `
+      <box-icon name="play-circle" color="#fff"></box-icon>
+      RUN
+    `;
     btnRun.style.backgroundColor = "#1b1b1b";
     btnRun.style.cursor = "pointer";
   }

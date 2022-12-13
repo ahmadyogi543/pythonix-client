@@ -98,7 +98,7 @@ btnRun.addEventListener("click", () => {
       code: codeEditor.getValue(),
       input: codeInput.value,
     };
-    executeCode("https://pythonix-compiler.up.railway.app/execute", data)
+    executeCode("https://pythonix-compiler.up.railway.app/api/v1/execute", data)
       .then((resp) => {
         codeOutput.classList.toggle("center");
         codeOutput.innerHTML = `

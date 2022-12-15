@@ -94,11 +94,11 @@ btnRun.addEventListener("click", () => {
     changeBtnState(true);
 
     const data = {
-      id: 1,
       code: codeEditor.getValue(),
       input: codeInput.value,
+      language: "py",
     };
-    executeCode("https://pythonix-compiler.up.railway.app/api/v1/execute", data)
+    executeCode("https://go-exec.up.railway.app/api/v1/compiler/execute", data)
       .then((resp) => {
         codeOutput.classList.toggle("center");
         codeOutput.innerHTML = `

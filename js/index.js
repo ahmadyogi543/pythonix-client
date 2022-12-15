@@ -67,6 +67,7 @@ async function executeCode(url = "", data = {}) {
     credentials: "same-origin",
     headers: {
       "Content-Type": "application/json",
+      "x-api-key": "8b71a4c3-9981-436f-a199-531171fb0e5f",
     },
     body: JSON.stringify(data),
   });
@@ -116,7 +117,6 @@ btnRun.addEventListener("click", () => {
         alert("Something is wrong with the system...");
         clearOutput();
         changeBtnState();
-        console.log("lol");
       });
   }
 });

@@ -99,7 +99,10 @@ btnRun.addEventListener("click", () => {
       input: codeInput.value,
       language: "py",
     };
-    executeCode("https://go-exec.up.railway.app/api/v1/compiler/execute", data)
+    executeCode(
+      "https://go-exec-prod.up.railway.app/api/v1/compiler/execute",
+      data
+    )
       .then((resp) => {
         codeOutput.classList.toggle("center");
         codeOutput.innerHTML = `
